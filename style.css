@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:600&display=swap');
+
+.heart-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  padding: 13px 16px;
+  display: flex;
+  border: 2px solid #eae2e1;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #364f6b;
+}
+
+.content.heart-active {
+  border-color: #303a52;
+  background: #364f6b;
+}
+
+.heart {
+  position: absolute;
+  background: url("img.png") no-repeat;
+  background-position: left;
+  background-size: 2900%;
+  height: 90px;
+  width: 90px;
+  top: 50%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+}
+
+.text {
+  font-size: 18px;
+  margin-left: 30px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.numb:before {
+  content: '12';
+  font-size: 18px;
+  margin-left: 7px;
+  font-weight: 600;
+  color: #ffffff;
+  font-family: sans-serif;
+}
+
+.numb.heart-active:before {
+  content: '13';
+  color: #ffffff;
+}
+
+.text.heart-active {
+  color: #ffffff;
+}
+
+.heart.heart-active {
+  animation: animate .8s steps(28) 1;
+  background-position: right;
+}
+
+@keyframes animate {
+  0% {
+    background-position: left;
+  }
+
+  100% {
+    background-position: right;
+  }
+}
